@@ -1,8 +1,15 @@
-const togglePassword = document.getElementById('togglePassword');
-const passwordField = document.getElementById('password');
+document.addEventListener('DOMContentLoaded', function () {
+    const passwordField = document.getElementById('password');
+    const togglePassword = document.getElementById('togglePassword');
 
-// Add an event listener to the checkbox to toggle visibility
-togglePassword.addEventListener('change', function () {
-    // Check the state of the checkbox to determine visibility
-    passwordField.type = this.checked ? 'text' : 'password';
+    const confirmPasswordField = document.getElementById('confirm-password');
+    const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+
+    togglePassword.addEventListener('change', function () {
+        passwordField.type = this.checked ? 'text' : 'password';
+    });
+
+    toggleConfirmPassword.addEventListener('change', function () {
+        confirmPasswordField.type = this.checked ? 'text' : 'password';
+    });
 });

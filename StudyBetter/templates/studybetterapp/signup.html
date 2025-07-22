@@ -15,13 +15,7 @@
     <h2>Create Your Account</h2>
     <p>Welcome! Please create an account to continue.</p>
     
-    <!-- Sign up with Google -->
-    <a href="{% provider_login_url 'google' %}?next={% url 'dashboard' %}" class="google-signup">
-      <img src="{% static 'studybetterapp/images/googlelogo.svg' %}" alt="Google Logo" class="google-logo">
-      Sign up with Google
-    </a>
-    
-    <div class="separator">OR</div>
+   
     <form id="signup-form" method="post" action="{% url 'signup' %}">
       {% csrf_token %}
       {{ form.as_p }}  <!-- Render Django form -->
@@ -33,21 +27,20 @@
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required> <!-- Corrected name -->
   
+      <!-- Password Field -->
       <label for="password">Password:</label>
       <div class="password-container">
-          <input type="password" id="password" name="password" required>
-          <label class="show-password-label">
-              <input type="checkbox" id="togglePassword"> Show
-          </label>
+        <input type="password" id="password" name="password" required>
+        <label class="show-password-label">
+        </label>
       </div>
-  
+
+      <!-- Confirm Password Field -->
       <label for="confirm-password">Confirm Password:</label>
       <div class="password-container">
-          <input type="password" id="confirm-password" name="confirm_password" required>
-          <label class="show-password-label">
-              <input type="checkbox" id="togglePassword"> Show
-          </label>
+        <input type="password" id="confirm-password" name="confirm_password" required>
       </div>
+
   
       <p class="warning-message" id="warning-message"></p>
       <p class="warning-message" id="warning-message-name"></p>
