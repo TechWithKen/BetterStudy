@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-aaku1wmor0jbyfv7zbjc8tr+-1z-3a9&-r5pj6hvza_c5wct5*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://studybetter-eum4.onrender.com/"]
+ALLOWED_HOSTS = ['studybetter-eum4.onrender.com']
 
 
 # Application definition
