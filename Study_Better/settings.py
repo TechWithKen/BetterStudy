@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['studybetter-eum4.onrender.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://studybetter-eum4.onrender.com"
+]
+
 
 # Application definition
 SITE_ID=2
